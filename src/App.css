@@ -1,3 +1,17 @@
 .navbar-dark {
   background-color: #6666CC;
 }
+.row-header{
+  margin:0px auto;
+  padding:0px auto;
+}
+
+.row-content {
+  margin-bottom: 10px;
+}
+
+.footer{
+  background-color: #D1C4E9;
+  margin:0px auto;
+  padding: 20px 0px 20px 0px;
+}
