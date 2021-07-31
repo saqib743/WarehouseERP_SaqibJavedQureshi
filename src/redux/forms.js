@@ -1,4 +1,11 @@
 export const InitialEmployee = {
-    firstname:''
+    employeeId:'',
+    firstname:'',
+    lastname:'',
+    telnum:'',
+    email:'',
+    gender:'',
+    active:'',
+    permanentContractual:''
 }
     

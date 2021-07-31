@@ -24,15 +24,15 @@ class Listofemployees extends Component{
                     <tbody>
                         {this.props.employees.employees.map((employees) => {
                             return (
-                              <tr>
-                              <td>N/A</td>
-                              <td>{employees}</td>
-                              <td>N/A</td>
-                              <td>N/A</td>
-                              <td>N/A</td>
-                              <td>N/A</td>
-                              <td>N/A</td>
-                              <td>N/A</td>
+                              <tr key={employees.employeeId}>
+                              <td>{employees.employeeId}</td>
+                              <td>{employees.firstname}</td>
+                              <td>{employees.lastname}</td>
+                              <td>{employees.telnum}</td>
+                              <td>{employees.email}</td>
+                              <td>{employees.gender}</td>
+                              <td>{employees.active}</td>
+                              <td>{employees.permanentContractual}</td>
                               </tr>
                             );
                           })}

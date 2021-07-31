@@ -1,10 +1,35 @@
 import { url } from "../shared/url";
 import * as ActionTypes from './ActionTypes';
 
-export const addEmployee = (employee) => ({
+export const addEmployee = (employeeId,firstname,lastname,telnum,email,gender,active,permanentContractual) => ({
     type: ActionTypes.ADD_EMPLOYEE,
-    payload: employee
+    payload: {employeeId:employeeId,
+                firstname:firstname,
+                lastname:lastname,
+                telnum:telnum,
+                email:email,
+                gender:gender,
+                active:active,
+                permanentContractual:permanentContractual}
 });
+
+export const addEmployeet = (employeeId,firstname,lastname,telnum,email,gender,active,permanentContractual) => {
+    console.log("2");
+    // const constructEmployee={
+    //         employeeId:employeeId,
+    //         firstname:firstname,
+    //         lastname:lastname,
+    //         telnum:telnum,
+    //         email:email,
+    //         gender:gender,
+    //         active:active,
+    //         permanentContractual:permanentContractual
+    //     }
+    //     console.log("1");
+    //     //addEmployeeRedux(JSON.stringify(constructEmployee));
+    //     console.log(constructEmployee);
+    //     console.log(constructEmployee);
+}
 
 export const postEmployee = (firstname) => (dispatch)=>{
     const newEmployee={

@@ -6,7 +6,7 @@ import { TransitionGroup, CSSTransition } from 'react-transition-group';
 import Home from './Home';
 import HRMApp from './HRM';
 import LogisticsApp from './Logistics';
-import AddEmployee from './HRM-AddEmployee';
+
 import {addEmployee} from '../redux/ActionCreators';
 import {connect} from 'react-redux';
 import { actions } from 'react-redux-form';
@@ -19,7 +19,7 @@ const mapStateToProps = state=>{
   
   const mapDispatchToProps = dispatch => ({
     
-    addEmployee: (firstname) =>dispatch(addEmployee(firstname)),
+    addEmployee: (employeeId,firstname,lastname,telnum,email,gender,active,permanentContractual) =>dispatch(addEmployee(employeeId,firstname,lastname,telnum,email,gender,active,permanentContractual)),
     resetAddEmployeeForm:()=>{dispatch(actions.reset('employee'))}
   });
   
