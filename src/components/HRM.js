@@ -30,7 +30,7 @@ render(){
             </div>
             <div className='row row-content'>
                 <div className="col-12 col-sm-3">
-                    <Button color="success" onClick={this.toggleModal}>Add Employee</Button>
+                    <Button color="success" onClick={this.toggleModal}>Add Employee ( {this.props.employees.employees.length} )</Button>
                 </div>
             </div>
             <div className='row row-content'>
