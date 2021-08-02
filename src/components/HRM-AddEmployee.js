@@ -1,7 +1,7 @@
 import React,{Component} from 'react';
 import {Button, Label, Col,Row} from 'reactstrap'
 import {Control,Form,Errors} from 'react-redux-form';
-import {Link} from 'react-router-dom';
+
 
 
 
@@ -14,6 +14,7 @@ class AddEmployee extends Component{
     handleSubmit(values){
         this.props.addEmployee(values.employeeId,values.firstname,values.lastname,values.telnum,values.email,values.gender,values.active,values.permanentContractual);
         this.props.resetAddEmployeeForm();
+        
     }
     
     render(){
@@ -58,19 +59,31 @@ class AddEmployee extends Component{
                                 <Row className = "form-group">
                                 <Label htmlFor="gender" md={2}>Gender</Label>
                                 <Col md={10}>
-                                    <Control.text model=".gender" id="gender" name="gender" placeholder="Gender" className="form-control" />
+                                    <Control.select model=".gender" name="gender" defaultValue= "Select" className="form-control">
+                                        <option disabled>Select</option>
+                                        <option>Male</option>
+                                        <option>Female</option>
+                                    </Control.select>
                                 </Col>
                                 </Row>
                                 <Row className = "form-group">
                                 <Label htmlFor="active" md={2}>Active</Label>
-                                <Col md={10}>
-                                    <Control.text model=".active" id="active" name="active" placeholder="Active"  className="form-control"  />
-                                </Col>
+                                    <Col md={10}>
+                                        <Control.select model=".active" name="active" defaultValue= "Select" className="form-control">
+                                            <option disabled>Select</option>
+                                            <option>Active</option>
+                                            <option>Not Active</option>
+                                        </Control.select>
+                                    </Col>
                                 </Row>
                                 <Row className = "form-group">
                                 <Label htmlFor="permanentContractual" md={2}>Permanent/ Contractual</Label>
                                 <Col md={10}>
-                                    <Control.text model=".permanentContractual" id="permanentContractual" name="permanentContractual" placeholder="Permanent/ Contractual"  className="form-control"  />
+                                        <Control.select model=".permanentContractual" name="permanentContractual" defaultValue= "Select" className="form-control">
+                                            <option disabled>Select</option>
+                                            <option>Permanent</option>
+                                            <option>Contractual</option>
+                                        </Control.select>
                                 </Col>
                                 </Row>
                                 <Row className = "form-group">
@@ -91,3 +104,5 @@ class AddEmployee extends Component{
     }
 }
 export default AddEmployee;
+
+

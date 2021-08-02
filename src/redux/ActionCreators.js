@@ -13,6 +13,18 @@ export const addEmployee = (employeeId,firstname,lastname,telnum,email,gender,ac
                 permanentContractual:permanentContractual}
 });
 
+export const addGood = ( goodId,goodName,qty,packedUnpacked,recievedOn,recievedBy,retentionPeriod,dispatchingDate) => ({
+    type: ActionTypes.ADD_GOOD,
+    payload: {goodId:goodId,
+                goodName:goodName,
+                qty:qty,
+                packedUnpacked:packedUnpacked,
+                recievedOn:recievedOn,
+                recievedBy:recievedBy,
+                retentionPeriod:retentionPeriod,
+                dispatchingDate:dispatchingDate}
+});
+
 export const addEmployeet = (employeeId,firstname,lastname,telnum,email,gender,active,permanentContractual) => {
     console.log("2");
     // const constructEmployee={

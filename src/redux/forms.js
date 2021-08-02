@@ -8,4 +8,13 @@ export const InitialEmployee = {
     active:'',
     permanentContractual:''
 }
-    
+export const InitialGood = {
+    goodId:'',
+    goodName:'',
+    qty:'',
+    packedUnpacked:'',
+    recievedOn:'',
+    recievedBy:'',
+    retentionPeriod:'',
+    dispatchingDate:''
+}

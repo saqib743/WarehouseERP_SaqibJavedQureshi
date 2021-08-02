@@ -3,9 +3,6 @@ import {Table} from 'reactstrap';
 
 
 class Listofemployees extends Component{
-    renderEmployee(employee){
-
-    }
     render(){
         return(
                   <Table striped>

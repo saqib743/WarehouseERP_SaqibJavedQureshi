@@ -2,10 +2,10 @@ import React,{Component} from 'react';
 import Listofemployees from './HRM-ListofEmployees';
 
 import { Button, Modal, ModalHeader, ModalBody} from 'reactstrap';
-import {Link} from 'react-router-dom';
+
 import AddEmployee from './HRM-AddEmployee';
  
-import {Control,Form,Errors} from 'react-redux-form';
+
 
 class HRMApp extends Component{
     constructor(props){
@@ -38,12 +38,14 @@ render(){
                     <Listofemployees employees={this.props.employees}/>
                 </div>
             </div>
-            <Modal isOpen={this.state.isModalOpen} toggle={this.toggleModal} className="modal-dialog modal-lg">
-                    <ModalHeader toggle={this.toggleModal}>Add Employee</ModalHeader>
-                    <ModalBody>
-                      <AddEmployee addEmployee={this.props.addEmployee} resetAddEmployeeForm={this.props.resetAddEmployeeForm}/>
-                    </ModalBody>
+            <div className='col-12'>
+                <Modal isOpen={this.state.isModalOpen} toggle={this.toggleModal} >
+                        <ModalHeader toggle={this.toggleModal}>Add Employee</ModalHeader>
+                        <ModalBody>
+                        <AddEmployee addEmployee={this.props.addEmployee} resetAddEmployeeForm={this.props.resetAddEmployeeForm}/>
+                        </ModalBody>
                 </Modal>
+            </div>
         </div>
         
     )
