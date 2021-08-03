@@ -5,7 +5,7 @@ import {Table} from 'reactstrap';
 class Listofgoods extends Component{
     render(){
         return(
-                  <Table striped>
+                  <Table striped responsive hover>
                     <thead>
                       <tr>
                         <th>Good Id</th>

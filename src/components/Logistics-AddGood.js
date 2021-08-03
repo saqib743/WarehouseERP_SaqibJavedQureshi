@@ -47,13 +47,19 @@ class AddGood extends Component{
                                 <Row className = "form-group">
                                 <Label htmlFor="packedUnpacked" md={2}>Packed/ Un-Packed</Label>
                                 <Col md={10}>
-                                    <Control.text model=".packedUnpacked" id="packedUnpacked" name="packedUnpacked" placeholder="Packed/ Un-Packed" className="form-control" />
+                                    
+                                    <Control.select model=".packedUnpacked" name="packedUnpacked" defaultValue= "Select" className="form-control">
+                                            <option disabled>Select</option>
+                                            <option>Packed</option>
+                                            <option>UnPacked</option>
+                                        </Control.select>
                                 </Col>
                                 </Row>
                                 <Row className = "form-group">
                                 <Label htmlFor="recievedOn" md={2}>Recieved On</Label>
                                 <Col md={10}>
                                     <Control.text model=".recievedOn" id="recievedOn" name="recievedOn" placeholder="Recieved On" className="form-control" />
+                                    
                                 </Col>
                                 </Row>
                                 <Row className = "form-group">

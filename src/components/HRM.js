@@ -39,7 +39,7 @@ render(){
                 </div>
             </div>
             <div className='col-12'>
-                <Modal isOpen={this.state.isModalOpen} toggle={this.toggleModal} >
+                <Modal isOpen={this.state.isModalOpen} toggle={this.toggleModal} className="modal-lg" >
                         <ModalHeader toggle={this.toggleModal}>Add Employee</ModalHeader>
                         <ModalBody>
                         <AddEmployee addEmployee={this.props.addEmployee} resetAddEmployeeForm={this.props.resetAddEmployeeForm}/>
